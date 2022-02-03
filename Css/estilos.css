@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Inter:wght@300;600;700&family=Lexend+Deca&display=swap');
+
+/*variables generales*/
+:root{
+    --color-primario: #444CF7;
+    --color-titulo:#000;
+    --alineacion-titulo:left;
+    --padding-container: 100px 0;
+    --width-container:90%;
+    --max-width-container:1200px;
+    --color-btn:#444CF7;
+    --text-btn:#fff;
+    --padding-btn:20px 35px;
+    --height-shape:18em;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+.card-img{
+    width: 100px;
+    background-color: black;
+}
+
+/*contenedor principal*/
+.container{
+    width: var(--width-container);
+    max-width: var(--max-width-container);
+    padding: var(--padding-container);
+    margin: 0px auto;
+    overflow: hidden;
+}
+/*****************************************************************************/
+
+
+/*****estilos al header******/
+
+.cabecera{
+    height: 100vh;
+    min-height: 500px;
+    position: relative;
+    --padding-container: 0;
+}
+
+
+.cabecera::after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: var(--height-shape);
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: #545454;
+    z-index: -1;
+    clip-path: polygon(0 100%, 100% 100%, 100% 0);
+
+}
+
+.cabecera-container{
+    display: grid;
+    height: 100%;
+    grid-template-columns: 3fr 2fr;
+    place-items: center;
+    gap: 20px;
+}
+
+.cabecera-title{
+    font-size: 4rem;
+}
+
+.cabecera-parrafo{
+    font-size: 1.4rem;
+    margin: 25px 0;
+}
+
+
+.cabecera-img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+/*********fin de estilos del header*****************/
+
+
+
+/****Estilos generales del main******/
+.title{
+   
+    font-size: 2.5rem;
+    text-align: var(--alineacion-titulo);
+    color: var(--color-titulo);
+}
+
+.title--border::after{
+    width: 100px;
+    height: 4px;
+
+    content: "";
+    margin-top: 20px;
+    background-color: var(--color-primario);   
+
+    display: block;
+}
+/*Fin de los Estilos generales del main*/
+
+
+/*****estilos a la seccion sobre mi ***********/
+.about{
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+}
+
+
+.about-course{
+    width: 90%;
+}
+
+.about-parrafo{
+
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: justify;
+
+    margin: 20px 0;
+}
+
+.about-picture{
+    text-align: center;
+}
+
+.about-img{  
+    width: 90%;
+    padding-top: 60px;
+}
+
+/*****************************************************/
+/*estilos a la seccion de mis proyectos */
+.card .title{
+    padding-bottom: 30px;
+}
+
+.card-container{
+   
+    width: 99%;
+    margin: 0 auto;
+    margin-top: 60px;
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
+    gap: 20px;
+
+    grid-template-areas: 
+    ".      card1   .    "
+    "card2  card1   card3"
+    "card2  card4   card3"
+    ".      card4   .   "; 
+}
+
+
+.card-item{
+    text-align: center;
+    padding: 20px;
+    border-top: 5px solid #000;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-img{
+    width: 80px;
+    height: 80px;
+
+    margin-top: 20px;
+    border-radius: 50%;
+
+    background: #545454;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-picture{
+    width: 50px;
+}
+
+.card-title{
+    margin: 20px 0 ;
+    font-size: 1.5rem;
+}
+
+.card-parrafo{
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+/*estilos a los botones*/
+.btn {    
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+
+    text-align: center;
+    text-decoration: none;
+    
+    display: inline-block;
+    padding: 15px 32px;
+    background-color: rgb(20, 154, 207); /* Green */
+    border: none;
+    border-radius: 10px;
+}
+
+.btn:hover{
+    transition: all 0.3s;
+    background: rgb(2, 26, 47);
+}
+
+/**dividimos los parrafos**/
+.card-item:nth-last-of-type(1){
+    grid-area: card1;
+}
+
+.card-item:nth-last-of-type(2){
+    grid-area: card2;
+}
+
+.card-item:nth-last-of-type(3){
+    grid-area: card3;
+}
+
+.card-item:nth-last-of-type(4){
+    grid-area: card4;
+}
+
+
+/**************************************************************/
+/***********FOOTER *********/
+
+.footer{
+    position: relative;
+    --padding-container: 160px 0 50px;
+}
+
+.footer::before{
+    width: 100%;
+    height: 100px;
+
+    content: "";
+    position: absolute;
+    background: #545454;
+
+    top: 0;
+    left: 0;
+    clip-path: polygon( 0 0 , 100% 0, 50% 100%);
+}
+
+.footer__contact{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    place-items: center;
+    gap: 20px;
+
+    margin-bottom: 30px;
+}
+
+.footer__social{
+    display: flex;
+    padding-top: 50px;
+    flex-wrap: wrap;
+}
+
+.footer__link{
+    width: 60px;
+    height: 60px;
+    
+    
+
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__icon{
+    width: 30px;
+}
+
+.footer__copy{
+    margin: 20px 0;
+    font-weight: 300;
+}
+
+.footer__picture{
+    margin: 0;
+}
+
+.footer__img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+
+.footer__copyright{
+
+    padding-top: 30px;
+    border-top: 2px solid #918484;
+    text-align: center;
+    font-weight: 600;
+}
+
+/*transicion a los iconos de redes sociales*/
+.footer__link:hover{
+    transition: all 0.3s;
+    background-color: #c8f4ff;
+}
+
+   
+/******************************************************************/
+/***********RESPONSIVE************/
+@media (max-width: 768px) {
+    :root{
+        --height-shape:14em;
+    }
+
+    /******Seccion cabecera*******/
+
+    .cabecera::after{
+        background: #ccc;
+    }
+
+    .cabecera{
+        min-height: 100vh;
+        height: auto;
+    }
+
+    .cabecera-texts{
+        text-align: center;
+    }
+    
+
+    .cabecera-container{
+        --padding-container: 60px 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content 1fr;
+    }
+
+     /* Quite el height y limite el width de la imagen */
+    .cabecera-img{
+        order: -1;
+        max-width: 300px;
+    }
+
+    .cabecera-title{
+        font-size: 4rem;
+    }
+
+    
+    /*********Seccion sobre mi****************/
+    .about{
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content 1fr;
+        gap: 80px;
+    }
+
+    .about-course{
+        width: 100%;
+
+    }
+
+    .about-picture{
+        order: 2;
+    }
+
+    .about-img{
+        width: 100%;
+    }
+
+    /*seccion proyectos*/
+    .card-container{
+        width: 92%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,1fr);
+        grid-template-areas: 
+        "card1"
+        "card2"
+        "card3"
+        "card4";
+    }
+
+    /*seccion al pie de pagina*/
+    .footer::before{
+        background: #ccc;
+    }
+
+    .footer__contact{
+        grid-template-columns: 1fr;
+    }
+    .footer__texts{
+        order: 1;/*la imagen pasa de primero*/
+    }
+
+    .footer__texts .title {
+        text-align: center;
+    }
+    
+    .footer__texts .footer__copy{
+        text-align: center;
+       
+    }
+
+    .footer__social{
+        justify-content: space-evenly;
+    }
+
+    /*no mostramos el borde de las redes sociales */
+   .footer .title--border::after{
+       display: none;
+   }
+}
+
+
+
+@media  (max-width: 500px){
+   
+    /*seccion cabecera*/
+    .cabecera-container{
+        --padding-container: 30px 0;
+    }
+
+    .cabecera-texts{
+        text-align: center;
+    }
+
+    .cabecera-title{
+        font-size: 3rem;
+    }
+
+    /*seccion footer*/
+    .footer__img{
+        display: none;
+    }
+   
+}
+
