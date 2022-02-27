@@ -12,80 +12,113 @@
     --text-btn:#fff;
     --padding-btn:20px 35px;
     --height-shape:18em;
+    --color-text: #ffffff;
 }
 
 body{
     font-family: 'Inter', sans-serif;
 }
 
-.card-img{
-    width: 100px;
-    background-color: black;
-}
 
-/*contenedor principal*/
 .container{
+  
     width: var(--width-container);
     max-width: var(--max-width-container);
     padding: var(--padding-container);
     margin: 0px auto;
     overflow: hidden;
 }
-/*****************************************************************************/
+
+/*Inicio del section*/
+.section{
+    width: 100%;
+    height: 50px;
+
+    background: #131010;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-bar{    
+    width: 90%;
+
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.menu-bar .enlaces ul li{
+
+    display: inline-block;
+    padding: 0 15px
+}
 
 
-/*****estilos al header******/
+.menu-bar .enlaces ul li a{
 
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.menu-bar .enlaces ul li a:hover{
+
+    color: rgb(186, 127, 241);
+    transition: all 0.4s;
+}
+/*fin del section*/
+
+
+/*inicio del header*/
 .cabecera{
+
     height: 100vh;
     min-height: 500px;
-    position: relative;
+
+    position: relative;   
     --padding-container: 0;
+
+    background: url(assets/Background1.jpeg);
+    background-size: cover;
 }
 
-
-.cabecera::after{
-    content: "";
-    display: block;
-    position: absolute;
-    height: var(--height-shape);
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    background: #545454;
-    z-index: -1;
-    clip-path: polygon(0 100%, 100% 100%, 100% 0);
-
-}
 
 .cabecera-container{
-    display: grid;
     height: 100%;
-    grid-template-columns: 3fr 2fr;
+
+    display: grid;
+    grid-template-columns: 2fr 4fr;
     place-items: center;
     gap: 20px;
+   
 }
 
 .cabecera-title{
+    color: var(--color-text);
     font-size: 4rem;
 }
 
 .cabecera-parrafo{
+
+    color: var(--color-text);
     font-size: 1.4rem;
+    
     margin: 25px 0;
 }
 
-
 .cabecera-img{
     width: 100%;
+
+    border: 1px solid black;
     border-radius: 50%;
 }
-
-/*********fin de estilos del header*****************/
-
+/*fin del header*/
 
 
-/****Estilos generales del main******/
+/****Inicio del main******/
 .title{
    
     font-size: 2.5rem;
