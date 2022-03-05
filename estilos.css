@@ -1,27 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Inter:wght@300;600;700&family=Lexend+Deca&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
 /*variables generales*/
 :root{
-    --color-primario: #444CF7;
-    --color-titulo:#000;
+    --color-primario: #3db5c5;
+    --color-titulo:#ffffffcc;
     --alineacion-titulo:left;
-    --padding-container: 100px 0;
+
+    --padding-container: 40px 0;
     --width-container:90%;
     --max-width-container:1200px;
+    
     --color-btn:#444CF7;
     --text-btn:#fff;
+    
     --padding-btn:20px 35px;
     --height-shape:18em;
     --color-text: #ffffff;
+
+    --bacgroun-main: #131010;
 }
+
 
 body{
     font-family: 'Inter', sans-serif;
+    background: var(--bacgroun-main);
 }
 
 
 .container{
-  
     width: var(--width-container);
     max-width: var(--max-width-container);
     padding: var(--padding-container);
@@ -81,7 +92,7 @@ body{
     position: relative;   
     --padding-container: 0;
 
-    background: url(assets/Background1.jpeg);
+    background: url(Images/Background1.jpeg);
     background-size: cover;
 }
 
@@ -121,14 +132,15 @@ body{
 /****Inicio del main******/
 .title{
    
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     text-align: var(--alineacion-titulo);
+   
     color: var(--color-titulo);
 }
 
 .title--border::after{
-    width: 100px;
-    height: 4px;
+    width: 200px;
+    height: 5px;
 
     content: "";
     margin-top: 20px;
@@ -141,23 +153,26 @@ body{
 
 /*****estilos a la seccion sobre mi ***********/
 .about{
+ 
     display: grid;
-    grid-template-columns: 5fr 4fr;
+    grid-template-columns: 6fr 3fr;
 }
 
 
 .about-course{
-    width: 90%;
+   width: 95%;
 }
 
 .about-parrafo{
 
-    font-size: 18px;
+    font-size: 25px;
+    color: var(--color-text);
     font-weight: 300;
-    line-height: 1.5;
+
+    line-height: 1.8;
     text-align: justify;
 
-    margin: 20px 0;
+    margin: 22px 0;
 }
 
 .about-picture{
@@ -165,32 +180,40 @@ body{
 }
 
 .about-img{  
-    width: 90%;
-    padding-top: 60px;
+    width: 95%;
+    padding-top: 125px;
 }
 
-/*****************************************************/
+
 /*estilos a la seccion de mis proyectos */
+
 .card .title{
     padding-bottom: 30px;
 }
 
 .card-container{
-   
+    
     width: 99%;
+
     margin: 0 auto;
     margin-top: 60px;
 
     display: grid;
+   
+    
+ 
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(4,1fr);
+   
     gap: 20px;
 
+    
     grid-template-areas: 
     ".      card1   .    "
     "card2  card1   card3"
     "card2  card4   card3"
     ".      card4   .   "; 
+  
 }
 
 
