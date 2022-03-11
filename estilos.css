@@ -22,7 +22,7 @@
     --height-shape:18em;
     --color-text: #ffffff;
 
-    --bacgroun-main: #131010;
+    --bacgroun-main: #0e0d0d;
 }
 
 
@@ -160,11 +160,11 @@ body{
 
 
 .about-course{
-   width: 95%;
+    width: 95%;
 }
 
 .about-parrafo{
-
+   
     font-size: 25px;
     color: var(--color-text);
     font-weight: 300;
@@ -190,42 +190,40 @@ body{
 .card .title{
     padding-bottom: 30px;
 }
+.card-parrafo{
 
-.card-container{
-    
+    font-size: 25px;
+    font-weight: 300;
+
+    color: var(--color-text);
+}
+
+.card-container{ 
     width: 99%;
 
     margin: 0 auto;
     margin-top: 60px;
 
     display: grid;
-   
-    
- 
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(4,1fr);
-   
-    gap: 20px;
+    grid-template-columns: repeat(3,1fr);   
+    gap: 50px;
 
-    
-    grid-template-areas: 
-    ".      card1   .    "
-    "card2  card1   card3"
-    "card2  card4   card3"
-    ".      card4   .   "; 
-  
 }
 
 
-.card-item{
+.card-item{/*caja principal de los cards*/
+    
     text-align: center;
+    background: #ffffff;
     padding: 20px;
-    border-top: 5px solid #000;
-    box-shadow:  0 0 10px rgba(0, 0, 0, 0.5);
+    
+    border-top: 5px solid rgb(11, 218, 255);
+    border-radius: 10px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .card-img{
@@ -246,21 +244,29 @@ body{
     width: 50px;
 }
 
-.card-title{
+.card-title{/*titulo del card*/
     margin: 20px 0 ;
     font-size: 1.5rem;
 }
 
-.card-parrafo{
-    font-size: 18px;
-    font-weight: 300;
+.card-item p{/*parrafo que esta dentro del card de cada uno*/
+    width: 90%;
+   
+    font-size: 17px;
+    font-weight: 500;
+
+    text-align: justify;
+
+    color: #000;
     margin-bottom: 20px;
 }
+
 
 /*estilos a los botones*/
 .btn {    
     font-size: 16px;
     font-weight: 600;
+
     color: white;
 
     text-align: center;
@@ -276,23 +282,6 @@ body{
 .btn:hover{
     transition: all 0.3s;
     background: rgb(2, 26, 47);
-}
-
-/**dividimos los parrafos**/
-.card-item:nth-last-of-type(1){
-    grid-area: card1;
-}
-
-.card-item:nth-last-of-type(2){
-    grid-area: card2;
-}
-
-.card-item:nth-last-of-type(3){
-    grid-area: card3;
-}
-
-.card-item:nth-last-of-type(4){
-    grid-area: card4;
 }
 
 
@@ -447,12 +436,7 @@ body{
     .card-container{
         width: 92%;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4,1fr);
-        grid-template-areas: 
-        "card1"
-        "card2"
-        "card3"
-        "card4";
+        
     }
 
     /*seccion al pie de pagina*/
@@ -502,7 +486,9 @@ body{
     .cabecera-title{
         font-size: 3rem;
     }
-
+    .about-parrafo{
+        font-size: 20px;
+    }
     /*seccion footer*/
     .footer__img{
         display: none;
