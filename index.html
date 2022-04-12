@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="shortcut icon" href="Images/Foto-Principal.jpeg">
     <link rel="stylesheet" href="estilos.css">
+    
     <script src="https://kit.fontawesome.com/eb00b890a6.js" crossorigin="anonymous"></script>
+    
     <title>Portafolio | Daniel Garrio</title>
 </head>
 
@@ -18,8 +21,8 @@
             <nav class="enlaces" id="enlaces">
                 <ul>
                     <li><a href="#sobre-mi">Sobre mi</a></li>
-                    <li><a href="#Mis-proyectos">Mis proyecto</a></li>
-                    <li><a href="#Redes-sociales">Mis redes sociales</a></li>
+                    <li><a href="#Proyectos">Proyectos</a></li>
+                    <li><a href="#Habilidades">Habilidades</a></li>
                 </ul>
             </nav>
         </div>
@@ -30,11 +33,14 @@
     <header class="cabecera">
 
         <div class="cabecera-container container">
+            
             <img src="Images/Foto-Principal.jpeg" class="cabecera-img">
+            
             <div class="cabecera-texts">
                 <h1 class="cabecera-title">Daniel Arcángel Garrido Hoil</h1>
                 <p class="cabecera-parrafo">Frontend Developer</p>
             </div>
+
         </div>
     </header>
     <!--Fin  del header-->
@@ -43,7 +49,7 @@
     <main class="main">
 
         <!--secccion sobre mi-->
-        <section class="about container">
+        <section id="sobre-mi" class="about container" >
 
             <div class="about-course">
                 <h2 class="title title--border">Sobre mí</h2>
@@ -60,22 +66,13 @@
                 </p>
             </div>
 
-            <figure class="about-picture">
-                <img src="Images/web1.jpg" class="about-img">
-            </figure>
-
-
         </section>
         <!--fin de la secccion sobre mi-->
 
         <!--seccion proyectos -->
-        <section class="card">
+        <section id="Proyectos" class="card">       
             <div class="container">
-                <h2 class="title title--border">Mis proyectos</h2>
-                <p class="card-parrafo">
-                    Aquí te presento alguno de los proyectos en los cuales he trabajado y los cuales sigo mejorando
-                </p>
-
+                <h2 class="title title--border">Proyectos</h2>
                 <div class="card-container">
 
                     <div class="card-item">
@@ -91,40 +88,6 @@
                         </p>
                         <a href="https://github.com/Daniel-Garrido/Pagina-Web-Pizzeria" class="btn">ver proyecto</a>
                     </div>
-
-                    <div class="card-item">
-                        <figure class="card-img">
-                            <img src="assets/bx-layout.svg" class="card-picture">
-                        </figure>
-                        <h3 class="card-title">Calculadora Básica</h3>
-                        <p class="card-parrafo">
-                            Una calculadora básica utilizando el lenguaje de programación JAVA
-                        </p>
-                        <a href="https://github.com/Daniel-Garrido/Calculadora_Basica" class="btn">ver proyecto</a>
-
-                    </div>
-
-                    <div class="card-item">
-                        <figure class="card-img">
-                            <img src="assets/bx-code.svg" class="card-picture">
-                        </figure>
-                        <h3 class="card-title">Portafolio de Imagenes</h3>
-                        <p class="card-parrafo">
-                            Portafolio de imagenes hecho con HTML, CSS Y JS </p>
-                        <a href="https://github.com/Daniel-Garrido/Portafolio-Imagenes" class="btn">ver proyecto</a>
-
-                    </div>
-
-                    <div class="card-item">
-                        <figure class="card-img">
-                            <img src="assets/house-user-solid.svg" class="card-picture">
-                        </figure>
-                        <h3 class="card-title">Torres de Hanoi</h3>
-                        <p class="card-parrafo">
-                            Programa recursivo en c++
-                        </p>
-                        <a href="https://github.com/Daniel-Garrido/Torres-de-hanoi" class="btn">ver proyecto</a>
-                    </div>
                 </div>
 
             </div>
@@ -132,68 +95,16 @@
         <!--Fin de seccion proyectos -->
 
         <!--Inicio de seccion Skills -->
-        <section class="skills">
+        <section id="Habilidades" class="skills">
             <div class="container-skills container">
                 <div class="text">
-                    <h2 class="title title--border">Skills</h2>
+                    <h2 class="title title--border">Habilidades</h2>
                 </div>
             </div>
         </section>
         <!--FIN de seccion Skills -->
 
-
-        <section class="social-media">
-            <div class="social-media-container container">
-                <div class="social-media__contact">
-                    <div class="social__texts">
-                        <h2 class="title title--border">Mis redes sociales</h2>
-                        <p class="social__copy"> Puedes contactarme en cualquiera de mis redes sociales
-                        </p>
-
-                        <div class="social">
-
-                            <div class="container-icon">
-                                <a href="https://www.youtube.com/channel/UCr9445133eLcvzK9GVmJeUA" target="_blank"
-                                    class="youtube">
-                                    <i class="fab fa-youtube"></i>
-                                </a>
-                            </div>
-
-                            <div class="container-icon">
-                                <a href="https://www.facebook.com/DanielGarridotec/?ref=pages_you_manage">
-                                    <i class="fab fa-facebook"></i>
-                                </a>
-                            </div>
-
-                            <div class="container-icon">
-                                <a href="https://twitter.com/Daniel_Garrid0">
-                                    <i class=" fab fa-twitter"></i>
-                                </a>
-                            </div>
-
-                            <div class="container-icon">
-                                <a href="https://www.instagram.com/daniel.garrido_/">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     </main>
-
-
-    <!--Pie de pagina-->
-    <footer class="footer">
-        <p class="footer__copyright">
-            Sitio web creado por &copy; Daniel Garrido
-        </p>
-    </footer>
-    <!--fin del pie de pagina-->
-
+   
 </body>
-
 </html>
