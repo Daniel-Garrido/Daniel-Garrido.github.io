@@ -7,9 +7,10 @@
 
 /*variables generales*/
 :root{
-    --color-primario: #3db5c5;
+
+    --color-primario: #e87a19;
     --color-titulo:#ffffffcc;
-    --alineacion-titulo:left;
+    --alineacion-titulo:center;
     
     --fontsize-title: 3rem;
     --fontsize-text: 1.3rem;
@@ -26,18 +27,17 @@
     --padding-btn:20px 35px;
     --height-shape:18em;
 
-    --background--main: #303131;
-}
+    --background--main: #1f2020;      
+    --background--secundary: #303131;
 
+}
 
 body{
     font-family: 'Poppins', sans-serif;
     background: var(--background--main);
 }
 
-
 .container{
-
     width: var(--width-container);
     max-width: var(--max-width-container);
     padding: var(--padding-container);
@@ -51,7 +51,8 @@ body{
     width: 100%;
     height: 50px;
 
-    background: var(--bacgroun-main);
+    background: var(--background--main);
+   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,7 +83,7 @@ body{
 
 .menu-bar .enlaces ul li a:hover{
 
-    color: rgb(186, 127, 241);
+    color:var(--color-primario);
     transition: all 0.4s;
 }
 /*fin del section*/
@@ -146,14 +147,16 @@ body{
 
 
 .title--border::after{
-    width: 100px;
-    height: 4px;
+    width: 120px;
+    height: 6px;
 
     content: "";
+    margin: 0px auto;
     margin-top: 5px;
-    background-color: var(--color-primario);   
 
+    background-color: var(--color-primario);   
     display: block;
+    
 }/*Fin de los Estilos generales del main*/
 
 
@@ -179,13 +182,19 @@ body{
 
 
 /*estilos a la seccion de mis proyectos */
+.card{
+    background-color: var(--background--secundary);
+}
 
 .card-parrafo{
     font-size: var(--fontsize-text);
     color: var(--color-text);
 }
 
-.card-container{ 
+
+/*contenedor de las tarjetas*/
+.card-container{
+
     width: 100%;
 
     margin-top: 60px;
@@ -196,63 +205,133 @@ body{
 
 }
 
-.card-item{/*cajas de los cards*/
+/*cajas de los cards*/
+.card-item{
+   
     text-align: center;
-    padding: 20px;
-
+   
     border: .1px solid white;
-    border-radius: 5%;
-
+    border-radius: 20px;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
 
 }
 
-.card-img{
+
+/*imagen de las tarjetas*/
+.card-img .card-picture{
    
     width: 100%;
-    height: 80px;   
+    border-radius: 20px 20px 0 0 ;
 }
 
-.card-title{/*titulo del card*/
-    
-    margin: 20px;
+.text-card{
+    padding: 20px;
+}
 
+.card-title{/*titulo del card*/    
     font-size: var(--fontsize-text);
     font-weight: 550;
     color: var(--color-text);
 }
 
-.card-item p{/*parrafo que esta dentro del card de cada uno*/
-    width: 90%;
+/*parrafo que esta dentro del card de cada uno*/
+.card-item p{
+    width: 100%;
    
     font-size: 16px;
     font-weight: 400;
-    text-align: justify;
+    text-align: center;
 
     margin-bottom: 20px;
 }
 
 
-/*estilos a los botones*/
-.btn {    
+.btn-links{
+    width: 100%;
+    height: 55px;
+}
 
-    --fontsize-text: 14px;
-    color: var(--color-text);
+
+/*estilos a los botones*/
+.btn {  
+   
+    --color-primario: #ce7b1b;
+    --fontsize-text: 18px;
+    
+    font-size: var(--fontsize-text);
+    font-weight: 500;
+    color: #000;
 
     text-align: center;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 10px 10px;
 
-    background-color: rgb(20, 154, 207); /* Green */
+    background-color: var(--color-primario); 
     border: none;
     border-radius: 2%;
 }
 
+/*agregamos un hover a los botones*/
 .btn:hover{
+    
     transition: all 0.3s;
-    background: rgb(2, 26, 47);
+
+    color: var(--color-primario);
+    background: none;
+    border: 2px solid var(--color-primario);
+}
+
+/****seccion HABILIDADES*****/
+
+.skills{
+    width: 100%;
+}
+
+.skills-container{
+  
+    width: 100%;
+    list-style: none;
+    margin-top: 60px;
+   
+    display: grid;
+    grid-template-columns: repeat(4,1fr);/*se escora en 4*/   
+    place-items: center;
+
+    gap: 20px;
+
+}
+
+
+/*estilos a los iconos */
+.sm-icon {
+    font-size: 60px;
+}
+
+/*background a los iconos*/
+.html{color: #f06529;}
+.css{color: #3C99DC;}
+.bootstrap{color: #563d76;}
+.js{color: #f0db4f;}
+.java{color: #c50b0b;}
+.git{color: #f2502f;}
+.github{color: white;}
+
+
+/*Seccion Pie de pagina */
+
+.footer{
+  
+    background: var(--background--secundary);
+}
+
+.cabecera-text-footer{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
    
 /******************************************************************/
@@ -320,35 +399,6 @@ body{
         
     }
 
-    /*seccion al pie de pagina*/
-    .footer::before{
-        background: #ccc;
-    }
-
-    .footer__contact{
-        grid-template-columns: 1fr;
-    }
-    .footer__texts{
-        order: 1;/*la imagen pasa de primero*/
-    }
-
-    .footer__texts .title {
-        text-align: center;
-    }
-    
-    .footer__texts .footer__copy{
-        text-align: center;
-       
-    }
-
-    .footer__social{
-        justify-content: space-evenly;
-    }
-
-    /*no mostramos el borde de las redes sociales */
-   .footer .title--border::after{
-       display: none;
-   }
 }
 
 
