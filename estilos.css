@@ -133,6 +133,21 @@ body{
     border: 1px solid rgb(90, 88, 88);
     border-radius: 50%;
 }
+
+.icons-social-media{
+   width: 100%;
+   
+}
+
+.icons-social-media .icon{
+    font-size: 30px;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+.linkedin{color:#3C99DC}
+.instagram{color: #E1306C;}
+
 /*fin del header*/
 
 
@@ -337,15 +352,21 @@ body{
 /******************************************************************/
 /***********RESPONSIVE************/
 @media (max-width: 768px) {
+    
     :root{
         --height-shape:14em;
+
+    }
+
+    .title{
+        font-size: 2rem;
     }
 
     .section{
         display: none;
     }
-    /******Seccion cabecera*******/
 
+    /******Seccion cabecera*******/
     .cabecera{
         height: auto;
     }
@@ -394,10 +415,24 @@ body{
 
     /*seccion proyectos*/
     .card-container{
-        width: 92%;
+        width: 100%;
         grid-template-columns: 1fr;
         
     }
+
+    /*seccion habilidades*/
+
+    .skills-container{       
+        grid-template-columns: repeat(3,1fr);/*se escora en 3*/   
+        gap: 15px;
+    }
+
+    .skills-container li .about-parrafo{
+        --fontsize-text: 1rem;
+        font-size: var(--fontsize-text);
+        text-align: center;
+    }
+    
 
 }
 
@@ -410,18 +445,31 @@ body{
         --padding-container: 30px 0;
     }
 
-    .cabecera-texts{
-        text-align: center;
-    }
-
+   
     .cabecera-title{
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     /*seccion sobre mi*/
     .about-parrafo{
-        font-size: 17px;
+        font-size: 1rem;
     }
-    
+
+
+    /*seccion habilidades*/
+
+    .skills-container{
+        grid-template-columns: repeat(2,1fr);/*se escora en 3*/   
+    }
+
+    .skills-container li .about-parrafo{
+        font-size: .8rem;
+    }
+
+    /*seccion pie de pagina*/
+    .cabecera-text-footer .cabecera-parrafo{
+        font-size: 1rem;
+        font-weight: 700;
+    }
 }
 
