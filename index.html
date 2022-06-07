@@ -15,18 +15,26 @@
 
 <body>
 
-    <!--inicio de seccion-->
-    <div class="section">
+    <!--inicio de seccion de navegacion -->
+    <div class="menu-principal">
+     
         <div class="menu-bar" id="menuBar">
-            <nav class="enlaces" id="enlaces">
-                <ul>
-                    <li><a href="#sobre-mi">Sobre mi</a></li>
-                    <li><a href="#Proyectos">Proyectos</a></li>
-                    <li><a href="#Habilidades">Habilidades</a></li>
-                </ul>
-            </nav>
+   
+             <i class="fa-solid fa-xmark" id="btnMenuClose"></i>
+   
+             <nav class="enlaces" id="enlaces">
+                  <ul>
+                       <li><a href="#sobre-mi">Sobre mi</a></li>
+                       <li><a href="#Proyectos">Proyectos</a></li>
+                       <li><a href="#Habilidades">Habilidades</a></li>
+                  </ul>
+             </nav>
+   
         </div>
-    </div>
+   
+        <i class="fa-solid fa-bars" id="btnMenuOpen"></i>
+   
+   </div>
     <!--fin de seccion-->
 
     <!--inicio del header-->
@@ -41,9 +49,9 @@
                 <p class="cabecera-parrafo">Frontend Developer</p>
                 
                 <div class="icons-social-media">
-                    <i class="fa-brands fa-linkedin icon linkedin"><a href="#"></a></i>
-                    <i class="fa-brands fa-github icon github"><a href="#"></a></i>
-                    <i class="fa-brands fa-instagram icon instagram"><a href="#"></a></i>
+                    <a href="https://www.linkedin.com/in/daniel-garrido-05138b225/"><i class="fa-brands fa-linkedin icon linkedin"></i></a>
+                    <a href="https://github.com/Daniel-Garrido"><i class="fa-brands fa-github icon github"></i></a>
+                    <a href="https://www.instagram.com/daniel.garrido_/"><i class="fa-brands fa-instagram icon instagram"></i></a>
                 </div>
 
             </div>
@@ -60,6 +68,7 @@
         <section id="sobre-mi" class="about container" >
 
             <div class="about-course">
+
                 <h2 class="title title--border">Sobre mí</h2>
                 <p class="about-parrafo">
                     Hola, mi nombre es Daniel y actualmente soy estudiante de ingeniería en sistemas computacionales
@@ -72,6 +81,7 @@
                     soy creador de contenido en diversas redes sociales, divulgando temas de ingeniería
                     y programación.
                 </p>
+                
             </div>
 
         </section>
@@ -103,7 +113,7 @@
                         </div>
                     
                         <div class="btn-links">
-                            <a href="https://github.com/Daniel-Garrido/Pagina-Web-Pizzeria" class="btn">ver sitio</a>
+                            <a href="https://daniel-garrido.github.io/Banca-Digital/" class="btn">ver sitio</a>
                             <a href="https://github.com/Daniel-Garrido/Pagina-Web-Pizzeria" class="btn">ver código</a>
                         </div>
                     
@@ -127,7 +137,7 @@
                         </div>
                     
                         <div class="btn-links">
-                            <a href="https://github.com/Daniel-Garrido/Pagina-Web-Pizzeria" class="btn">ver sitio</a>
+                            <a href="https://daniel-garrido.github.io/Buscador-Imagenes/INDEX/index.html" class="btn">ver sitio</a>
                             <a href="https://github.com/Daniel-Garrido/Pagina-Web-Pizzeria" class="btn">ver código</a>
                         </div>
                     
@@ -151,7 +161,7 @@
                         </div>
                     
                         <div class="btn-links">
-                            <a href="https://github.com/Daniel-Garrido/Pagina-Web-Pizzeria" class="btn">ver sitio</a>
+                            <a href="https://daniel-garrido.github.io/Pagina-Web-Pizzeria/VIEW/index.html" class="btn">ver sitio</a>
                             <a href="https://github.com/Daniel-Garrido/Pagina-Web-Pizzeria" class="btn">ver código</a>
                         </div>
                     
@@ -192,13 +202,29 @@
 
     <!--Inicio del pie de pagina -->
     <footer class="footer ">
-        <div class="container">
+        
+        <div class="container container-footer">
+           
             <div class="cabecera-text-footer">
                 <p class="cabecera-parrafo">Sitio web elaborado por Daniel Garrido</p>
-            </div>
+            </div> 
+            
+            <ul class="footer-social_media ">
+
+                <li><a href="https://www.facebook.com/DanielGarridotec/?ref=pages_you_manage"><i class="fa-brands fa-facebook icon facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/daniel.garrido_/"><i class="fa-brands fa-instagram icon instagram"></i></a></li>
+                <li><a href="https://twitter.com/Daniel_Garrid0"><i class="fa-brands fa-twitter icon twitter"></i></a></li>
+                <li><a href="https://www.tiktok.com/@daniel.garrido_"><i class="fa-brands fa-tiktok icon tiktok"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCr9445133eLcvzK9GVmJeUA"><i class="fa-brands fa-youtube icon youtube"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/daniel-garrido-05138b225/"><i class="fa-brands fa-linkedin icon linkedin"></i></a></li>
+                <li><a href="https://github.com/Daniel-Garrido"><i class="fa-brands fa-github icon github"></i></a></li>
+                 
+            </ul>
+
         </div>
     </footer>
     <!--FIN del pie de pagina -->
-   
+
+    <script src="js.js"></script>
 </body>
 </html>
