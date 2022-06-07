@@ -38,6 +38,7 @@ body{
 }
 
 .container{
+
     width: var(--width-container);
     max-width: var(--max-width-container);
     padding: var(--padding-container);
@@ -47,57 +48,84 @@ body{
 }
 
 /*Inicio del section*/
-.section{
+.menu-principal{
     width: 100%;
-    height: 50px;
+    height: 75px;
+    
+    position: fixed;
+    z-index: 1;
 
-    background: var(--background--main);
-   
+    color: var(--color-text);
+    background: var(--background--secundary);
+    
+
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+   
 }
 
-.menu-bar{    
-    width: 90%;
+
+.menu-bar{
+
+    width: 100%;
 
     display: flex;
-    justify-content: flex-end;
-
+    justify-content: right;
+    /*margin: 40px;*/
 }
 
 .menu-bar .enlaces ul li{
-
+    
     display: inline-block;
-    padding: 0 15px
+    padding: 0 30px;
 }
 
-
 .menu-bar .enlaces ul li a{
-
+    
     font-size: 20px;
     font-weight: 600;
-    text-decoration: none;
     color: var(--color-text);
+
+    text-transform: uppercase;
+    text-decoration: none;
+
 }
 
 .menu-bar .enlaces ul li a:hover{
-
-    color:var(--color-primario);
-    transition: all 0.4s;
+    color: var(--color-primario);
+    transition: all 0.3s;
 }
+
+
+
+.menu-principal i{/*estilos a los iconos de cerrar y de abrir navbar*/
+    
+    display: none;
+    cursor: pointer;
+    color: var(--color-text);
+    font-size: 30px;
+
+    float: right;
+}
+
+.menu-principal i:hover{
+    color: var(--color-secundario);
+    transition: all 0.3s;
+
+}
+
+
 /*fin del section*/
 
 
 /*inicio del header*/
 .cabecera{
-
     height: 100vh;
     min-height: 500px;
 
     --padding-container: 0;
-
-    background: url(Images/Background1.jpeg);
+    background: linear-gradient(rgba( 0, 0, 0, 0.6), rgba( 0 , 0, 0 , 0.6)),url(Images/Background1.jpeg);
     background-size: cover;
 }
 
@@ -114,13 +142,11 @@ body{
 
 
 .cabecera-title{
-
     font-size: var(--fontsize-title);
     color: var(--color-text);
 }
 
 .cabecera-parrafo{
-
     font-size: var(--fontsize-text);
     color: var(--color-text);
     
@@ -128,7 +154,7 @@ body{
 }
 
 .cabecera-img{
-    width: 90%;
+    width: 85%;
 
     border: 1px solid rgb(90, 88, 88);
     border-radius: 50%;
@@ -136,13 +162,12 @@ body{
 
 .icons-social-media{
    width: 100%;
-   
 }
 
-.icons-social-media .icon{
+.icon{
     font-size: 30px;
-    padding-top: 5px;
-    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
 }
 
 .linkedin{color:#3C99DC}
@@ -178,9 +203,11 @@ body{
 
 /*****estilos a la seccion sobre mi ***********/
 .about{
-
+    height: 60vh;
+    
     display: grid;
-    grid-template-columns: 6fr 3fr;
+    grid-template-columns: 1fr;
+    place-items: center;
 }
 
 
@@ -258,8 +285,9 @@ body{
    
     font-size: 16px;
     font-weight: 400;
-    text-align: center;
+    text-align: justify;
 
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
@@ -340,14 +368,40 @@ body{
 .footer{
   
     background: var(--background--secundary);
+
 }
 
-.cabecera-text-footer{
-
+.container-footer{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    
 }
+
+.footer-social_media{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.footer-social_media li{
+    list-style: none;
+
+}
+
+.footer-social_media .icon{
+    font-size: 30px;
+    margin: 20px;
+}
+
+.facebook{color: #3b5998;}
+.twitter{color: #00acee;}
+.tiktok{color: white;}
+.youtube{color: red;}
+
    
 /******************************************************************/
 /***********RESPONSIVE************/
@@ -362,13 +416,10 @@ body{
         font-size: 2rem;
     }
 
-    .section{
-        display: none;
-    }
-
+   
     /******Seccion cabecera*******/
     .cabecera{
-        height: auto;
+        padding-top: 20%;
     }
 
     .cabecera-texts{
@@ -377,19 +428,21 @@ body{
     
 
     .cabecera-container{
-        --padding-container: 60px 0;
+        
         grid-template-columns: 1fr;
         grid-template-rows: max-content 1fr;
     }
 
      /* Quite el height y limite el width de la imagen */
     .cabecera-img{
-        order: 1;
-        max-width: 80%;
+        order: 0;
+        margin-top: 40px;
+        max-width: 70%;
+
     }
 
     .cabecera-title{
-        font-size: 4rem;
+        font-size: 2.5rem;
     }
 
     
@@ -447,8 +500,59 @@ body{
 
    
     .cabecera-title{
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
+
+    /*inicio del section*/
+    .menu-principal{
+        position: fixed;
+        top: 0;
+        margin-top: 0;
+   }
+
+   .menu-principal i{
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+   }
+
+   .menu-bar{
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 1000;
+        background: #333;
+        transition: all 1s;
+        transform: translateX(100%);
+   }
+
+   .menu-bar.active{
+        transform: translateX(0%);
+   }
+
+   .menu-bar i{
+        position: absolute;
+        right: 30px;
+        top: 30px;
+   }
+
+   .menu-bar .enlaces ul li{
+        display: block;
+        padding: 20px 10px;
+        text-align: center;
+   }
+
+   .menu-bar .enlaces ul li a,
+   .menu-bar .sociales a{
+        font-size: 20px;
+   }
+
 
     /*seccion sobre mi*/
     .about-parrafo{
@@ -457,7 +561,6 @@ body{
 
 
     /*seccion habilidades*/
-
     .skills-container{
         grid-template-columns: repeat(2,1fr);/*se escora en 3*/   
     }
@@ -470,6 +573,11 @@ body{
     .cabecera-text-footer .cabecera-parrafo{
         font-size: 1rem;
         font-weight: 700;
+    }
+
+    .footer-social_media .icon{
+        font-size: 18px;
+        margin: 10px;
     }
 }
 
