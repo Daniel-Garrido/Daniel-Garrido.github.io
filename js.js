@@ -16,7 +16,7 @@ btnMenuClose.addEventListener("click", function () {
 
 // Cerrar menu con elementos de enlace
 enlaces.addEventListener("click", function () {
-    menuResponsive.style.transitionDelay = "0.02s";
+    menuResponsive.style.transitionDelay = "0.1s";//agregamos un tiempo  de la transicion
     menuResponsive.classList.remove("active");
 });
 
