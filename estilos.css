@@ -29,7 +29,6 @@
 
     --background--main: #1f2020;      
     --background--secundary: #303131;
-
 }
 
 body{
@@ -65,7 +64,7 @@ body{
    
 }
 
-
+/*seccion de navegacion */
 .menu-bar{
 
     width: 100%;
@@ -115,17 +114,18 @@ body{
 
 }
 
-
 /*fin del section*/
 
 
 /*inicio del header*/
+/*estilos a la imagen de fondo*/
 .cabecera{
+    
     height: 100vh;
     min-height: 500px;
 
     --padding-container: 0;
-    background: linear-gradient(rgba( 0, 0, 0, 0.6), rgba( 0 , 0, 0 , 0.6)),url(Images/Background1.jpeg);
+    background: linear-gradient(rgba(214, 214, 214, 0.3), rgba( 0 , 0, 0 , 0.4)),url(Images/Background1.jpeg);
     background-size: cover;
 }
 
@@ -353,20 +353,10 @@ body{
     font-size: 60px;
 }
 
-/*background a los iconos*/
-.html{color: #f06529;}
-.css{color: #3C99DC;}
-.bootstrap{color: #563d76;}
-.js{color: #f0db4f;}
-.java{color: #c50b0b;}
-.git{color: #f2502f;}
-.github{color: white;}
-
 
 /*Seccion Pie de pagina */
 
 .footer{
-  
     background: var(--background--secundary);
 
 }
@@ -397,13 +387,7 @@ body{
     margin: 20px;
 }
 
-.facebook{color: #3b5998;}
-.twitter{color: #00acee;}
-.tiktok{color: white;}
-.youtube{color: red;}
 
-   
-/******************************************************************/
 /***********RESPONSIVE************/
 @media (max-width: 768px) {
     
